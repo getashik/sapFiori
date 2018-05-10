@@ -1,0 +1,23 @@
+<mvc:View controllerName="HybridMaster.view.Detail" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Page showNavButton="{device>/isPhone}" navButtonPress="onNavBack" class="sapUiFioriObjectPage" title="{i18n>detailTitle}">
+		<content>
+			<ObjectHeader title="{CompanyName}" number="{CustomerID}" numberUnit="{Address}">
+				<ObjectAttribute text="{ContactName}"/>
+				<ObjectAttribute text="{ContactTitle}"/>
+			</ObjectHeader>
+			<IconTabBar select="onDetailSelect" id="idIconTabBar">
+				<items>
+					<IconTabFilter key="" text="" icon="sap-icon://hint">
+						<!--key="Detail" -->
+						<content>
+							<core:Fragment fragmentName="HybridMaster.view.DetailInfoForm" type="XML"/>
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Toolbar></Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
